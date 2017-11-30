@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:baselineAligned="false"
+	android:orientation="vertical"
+	android:paddingBottom="1dp"
+	android:paddingLeft="1dp"
+	android:paddingRight="1dp"
+	android:paddingTop="1dp"
+	tools:context="com.bjghhnt.app.treatmentdevice.activities.FullPanelActivity">
+	<Button
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textSize="35sp"
+		android:visibility="gone"
+		android:id="@+id/btn_add"
+		android:layout_gravity="right|center"
+		android:text="+"/>
+	<Button
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textSize="35sp"
+		android:visibility="gone"
+		android:id="@+id/btn_minus"
+		android:layout_gravity="left|center"
+		android:text="-"/>
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+		<com.bjghhnt.app.treatmentdevice.views.TreatingMeterView
+			android:id="@+id/custom_view_in_settings"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"/>
+
+		<Button
+			android:id="@+id/btn_meter_settings_back"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/str_go_back"/>
+	</FrameLayout>
+
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="1">
+
+		<Button
+			android:id="@+id/btn_meter_settings_reset"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:text="@string/str_reset"/>
+
+		<LinearLayout
+			android:id="@+id/linear_layout_settings"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:baselineAligned="false"
+			android:orientation="horizontal">
+
+
+			<LinearLayout
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:orientation="vertical">
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_margin="4dp"
+					android:gravity="center"
+					android:text="@string/str_session_time"/>
+
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:orientation="horizontal">
+
+					<NumberPicker
+						android:id="@+id/numPicker_meter_hr"
+						android:layout_width="20dp"
+						android:layout_height="98dp"/>
+
+					<TextView
+						android:layout_width="43dp"
+						android:layout_height="match_parent"
+						android:gravity="center"
+						android:text="@string/str_hour"/>
+
+					<NumberPicker
+						android:id="@+id/numPicker_meter_min"
+						android:layout_width="20dp"
+						android:layout_height="98dp"/>
+
+					<TextView
+						android:layout_width="40dp"
+						android:layout_height="match_parent"
+						android:gravity="center"
+						android:text="@string/str_min"/>
+
+
+				</LinearLayout>
+
+				<ToggleButton
+					android:id="@+id/btn_meter_settings_confirm_time"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center"
+					android:textOff="@string/str_btn_start"
+					android:textOn="@string/str_stop"/>
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/linear_layout_level_setter"
+				android:gravity="center"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:orientation="vertical"
+				android:visibility="invisible">
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_margin="4dp"
+					android:gravity="center"
+					android:text="@string/str_treatment_level"/>
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="0dp"
+					android:layout_margin="4dp"
+					android:layout_weight="1"
+					android:gravity="center"
+					android:orientation="horizontal"
+					android:text="@string/str_level_dialer_place_holder">
+
+					<Button
+						android:id="@+id/btn_meter_set_minus"
+						style="?android:attr/buttonStyleSmall"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="@string/str_minus_sign"/>
+
+					<TextView
+						android:id="@+id/text_meter_set_level"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:width="50dp"
+						android:background="#8b78413f"
+						android:gravity="center_vertical|center_horizontal"
+						android:text="@string/str_level_default"/>
+
+					<Button
+						android:id="@+id/btn_meter_set_plus"
+						style="?android:attr/buttonStyleSmall"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="@string/str_plus_sign"/>
+				</LinearLayout>
+
+				<Button
+					android:id="@+id/btn_meter_final_confirm"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center"
+					android:text="@string/str_btn_confirm"/>
+			</LinearLayout>
+		</LinearLayout>
+	</FrameLayout>
+</LinearLayout>

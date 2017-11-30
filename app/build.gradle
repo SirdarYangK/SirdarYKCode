@@ -1,0 +1,162 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'me.tatarka:gradle-retrolambda:3.2.5'
+    }
+}
+
+// Required because retrolambda is on maven central
+repositories {
+    mavenCentral()
+    google()
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
+apply plugin: 'com.jakewharton.butterknife'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion '27.0.1'
+
+    defaultConfig {
+        buildConfigField "boolean", "ROCKCHIP", "false"
+        buildConfigField "boolean", "MIPS", "false"
+        applicationId "com.bjghhnt.app.treatmentdevice"
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        flavorDimensions "versionCode"
+        vectorDrawables.useSupportLibrary = true
+
+        externalNativeBuild {
+            cmake {
+                cppFlags ""
+            }
+        }
+    }
+
+    productFlavors {
+//        dev {
+//            buildConfigField "boolean", "MIPS", "false"
+//            buildConfigField "int", "CHANNELS_IN_TOTALL", "2"
+//            ndk {
+//                abiFilters "armeabi", "x86_64"
+//            }
+//
+//        }
+//        mips3 {
+//            buildConfigField "boolean", "MIPS", "false"
+//            buildConfigField "boolean", "ROCKCHIP", "true"
+//            buildConfigField "int", "CHANNELS_IN_TOTALL", "3"
+////            ndk {
+////                abiFilters "mips", "armeabi", "armeabi-v7a", "x86"
+////            }
+//        }
+        mips5 {
+            buildConfigField "boolean", "ROCKCHIP", "true"
+            buildConfigField "boolean", "MIPS", "false"
+
+//            buildConfigField "boolean", "ROCKCHIP", "false"
+//            buildConfigField "boolean", "MIPS", "true"
+
+            buildConfigField "int", "CHANNELS_IN_TOTALL", "5"
+//            ndk {
+//                abiFilters "rockchip", "armeabi", "armeabi-v7a", "x86"
+//            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+/**
+ *  this snippet is targeting at devices with MIPS cpu
+ * Starts here,
+ * **/
+//    task nativeLibsToJar(type: Zip, description: "create a jar archive of the native libs") {
+//        destinationDir file("$projectDir/libs")
+//        baseName "Native_Libs2"
+//        extension "jar"
+//        from fileTree(dir: "libs", include: "**/*.so")
+//        into "lib"
+//    }
+//
+//    tasks.withType(JavaCompile) {
+//        compileTask -> compileTask.dependsOn(nativeLibsToJar)
+//    }
+/**
+ * ends here. **/
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+ext {
+    appcompatVersion = "23.3.0"
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    // Testing-only dependencies
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2') {
+        exclude module: 'support-annotations'
+    }
+    androidTestCompile('com.android.support.test:runner:0.5') {
+        exclude module: 'support-annotations'
+    }
+    // App's dependencies, including test
+
+    //    androidTestCompile "com.android.support:support-v4:$appcompatVersion"
+
+    // cryptographic toolkit
+
+    compile project(':hwReader')
+    compile project(':hwReaderUi')
+    compile 'com.jakewharton:butterknife:8.5.1'
+    compile 'cn.carbswang.android:NumberPickerView:1.1.1'
+    compile 'com.kyleduo.switchbutton:library:1.4.4'
+    compile 'com.scottyab:secure-preferences-lib:0.1.4'
+    compile 'com.android.support:recyclerview-v7:27.+'
+    compile 'com.android.support:support-vector-drawable:27.+'
+    compile 'com.android.support:appcompat-v7:27.+'
+    compile 'org.adw.library:discrete-seekbar:1.0.1'
+    compile 'com.squareup:otto:1.3.8'
+    compile 'com.orhanobut:logger:1.15'
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    compile 'com.google.code.gson:gson:2.8.0'
+    compile 'io.reactivex:rxjava:1.2.4'
+    compile 'io.reactivex:rxandroid:1.2.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:design:27.+'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    testCompile 'org.testng:testng:6.9.6'
+    androidTestCompile 'junit:junit:4.12'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+    //第三方dialog
+    compile 'com.necer.ndialog2:ndialog:1.0.2'
+    compile 'com.afollestad.material-dialogs:core:0.9.5.0'
+    compile 'com.afollestad.material-dialogs:commons:0.9.5.0'
+
+}

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="30dp">
+
+    <TextView
+        android:id="@+id/tv_music_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:textColor="@android:color/white"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/tv_Artist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/propaganda_sound" />
+
+        <org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
+            android:id="@+id/sb_vol"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            app:dsb_indicatorColor="#E5B759"
+            app:dsb_max="150"
+            app:dsb_min="0"
+            app:dsb_progressColor="#E5B759"
+            app:dsb_scrubberHeight="10dp"
+            app:dsb_thumbSize="30dp"
+            app:dsb_trackColor="@android:color/white"
+            app:dsb_trackHeight="10dp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        android:layout_weight="2"
+        android:padding="30dp">
+
+        <ImageView
+            android:layout_width="450dp"
+            android:layout_height="350dp"
+            android:layout_gravity="center"
+            android:id="@+id/iv_music_album"
+            android:background="@drawable/propaganda_album_cover" />
+    </FrameLayout>
+
+    <org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
+        android:id="@+id/sb_music_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        app:dsb_indicatorColor="#E5B759"
+        app:dsb_max="100"
+        app:dsb_min="0"
+        app:dsb_progressColor="#E5B759"
+        app:dsb_scrubberHeight="5dp"
+        app:dsb_thumbSize="30dp"
+        app:dsb_trackColor="@android:color/white"
+        app:dsb_trackHeight="5dp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/ib_music_pre"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="50dp"
+                android:background="@drawable/propaganda_music_pre" />
+
+            <ImageButton
+                android:id="@+id/ib_music_play"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:background="@drawable/propaganda_music_play" />
+
+            <ImageButton
+                android:id="@+id/ib_music_next"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="50dp"
+                android:background="@drawable/propaganda_music_next" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

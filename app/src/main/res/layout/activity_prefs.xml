@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:baselineAligned="false"
+	android:orientation="horizontal"
+	tools:context=".activities.PrefsActivity">
+
+	<LinearLayout
+		android:layout_width="wrap_content"
+		android:layout_height="match_parent"
+		android:layout_weight="0"
+		android:orientation="vertical">
+
+		<Button
+			android:id="@+id/btn_prefs_wifi"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="@string/str_wireless_network"/>
+
+		<Button
+			android:id="@+id/btn_change_pin"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="@string/str_change_pin"/>
+
+		<Button
+			android:id="@+id/btn_start_debug"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="@string/str_debug"/>
+		<Button
+			android:id="@+id/btn_import_serial"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="@string/str_serial"/>
+
+		<Button
+			android:id="@+id/btn_prefs_back"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="@string/str_go_back"/>
+	</LinearLayout>
+
+	<FrameLayout
+		android:layout_width="wrap_content"
+		android:layout_height="match_parent"
+		android:layout_weight="1"
+		android:background="@android:color/darker_gray">
+
+		<ImageView
+			android:id="@+id/image_view_idle_preferences"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:contentDescription="@string/str_description_idle_panel"
+			android:scaleType="center"
+			android:src="@drawable/preferences_100px"/>
+
+		<LinearLayout
+			android:id="@+id/linear_layout_wifi_state"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical"
+			android:visibility="gone">
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:gravity="center"
+					android:text="@string/str_wifi"/>
+
+				<Switch
+					android:id="@+id/tgl_btn_prefs_wifi"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"/>
+			</LinearLayout>
+
+			<FrameLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+
+				<ProgressBar
+					android:id="@+id/progress_bar_enabling_wifi"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center"
+					style="@style/Widget.AppCompat.DropDownItem.Spinner"
+					android:visibility="gone"/>
+
+				<android.support.v7.widget.RecyclerView
+					android:id="@+id/recycler_view_available_items"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:scrollbars="vertical">
+				</android.support.v7.widget.RecyclerView>
+			</FrameLayout>
+		</LinearLayout>
+
+	</FrameLayout>
+</LinearLayout>

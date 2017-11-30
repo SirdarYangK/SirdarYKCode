@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string-array name="wifi_icons">
+		<item>@drawable/wifi_0_bar_48px</item>
+		<item>@drawable/wifi_1_bar_48px</item>
+		<item>@drawable/wifi_2_bar_48px</item>
+		<item>@drawable/wifi_3_bar_48px</item>
+		<item>@drawable/wifi_4_bar_48px</item>
+	</string-array>
+
+	<declare-styleable name="Battery">
+		<attr name="batteryOrientation">
+			<enum name="horizontal" value="0"/>
+			<enum name="vertical" value="1"/>
+		</attr>
+		<attr name="batteryColor" format="color"/>
+		<attr name="batteryPower" format="integer"/>
+		<attr name="chargemode" format="integer"/>
+	</declare-styleable>
+</resources>

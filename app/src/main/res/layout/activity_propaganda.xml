@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/ll_propaganda"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="left|center"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:id="@+id/rg_propaganda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/rb_propaganda_music"
+                style="@style/SettingRadioButtonStyles"
+                android:drawableTop="@drawable/propaganda_music_selector"
+                android:gravity="center"
+                android:text="@string/str_music_propaganda"
+                android:textColor="@color/propaganda_text_selector"
+                android:textSize="25sp" />
+
+            <RadioButton
+                android:id="@+id/rb_propaganda_books"
+                style="@style/SettingRadioButtonStyles"
+                android:layout_marginTop="50dp"
+                android:drawableTop="@drawable/propaganda_books_selector"
+                android:gravity="center"
+                android:text="@string/str_books_propaganda"
+                android:textColor="@color/propaganda_text_selector"
+                android:textSize="25sp" />
+
+            <RadioButton
+                android:id="@+id/rb_propaganda_video"
+                style="@style/SettingRadioButtonStyles"
+                android:layout_marginTop="50dp"
+                android:drawableTop="@drawable/propaganda_video_selector"
+                android:gravity="center"
+                android:text="@string/str_video_propaganda"
+                android:textColor="@color/propaganda_text_selector"
+                android:textSize="25sp" />
+
+            <RadioButton
+                android:id="@+id/rb_propaganda_back"
+                style="@style/SettingRadioButtonStyles"
+                android:layout_marginTop="50dp"
+                android:drawableTop="@drawable/propaganda_back_selector"
+                android:gravity="center"
+                android:text="@string/str_back_propaganda"
+                android:textColor="@color/propaganda_text_selector"
+                android:textSize="25sp" />
+        </RadioGroup>
+
+        <View
+            android:id="@+id/view_line"
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:background="@android:color/black" />
+
+        <ListView
+            android:id="@+id/lv_propaganda_list"
+            android:layout_width="400dp"
+            android:layout_height="match_parent"></ListView>
+
+        <com.bjghhnt.app.treatmentdevice.views.NoScrollViewPager
+            android:id="@+id/vp_propaganda_detail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></com.bjghhnt.app.treatmentdevice.views.NoScrollViewPager>
+
+    </LinearLayout>
+    <include
+        android:id="@+id/included_layout_titlebar"
+        layout="@layout/layout_titlebar"
+        />
+</FrameLayout>

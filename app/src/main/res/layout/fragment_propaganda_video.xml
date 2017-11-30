@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        android:id="@+id/rl_VideoView">
+        <VideoView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/vv_propaganda_video"
+            android:layout_centerInParent="true"/>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:id="@+id/fl_video_click">
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:clickable="true"
+            android:background="#55000000"
+            android:id="@+id/ll_video_controller"
+            android:padding="10dp">
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/ib_video_pause"
+                android:background="@drawable/propaganda_video_play"/>
+            <android.support.v7.widget.AppCompatSeekBar
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#33aabbdd"
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="20dp"
+                android:id="@+id/sb_video_progress"/>
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/ib_video_fullscreen"
+                android:background="@drawable/propaganda_video_fullscreen"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

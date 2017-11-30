@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#C6C4D1"
+        app:navigationIcon="@drawable/set_back"
+        app:title="@string/str_bar_setting"
+        app:logo="@drawable/setting"
+        android:id="@+id/setting_bar"
+        app:titleTextAppearance="@style/ToolbarTitle">
+
+    </android.support.v7.widget.Toolbar>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#4570BF"/>
+</LinearLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_titlebar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center_vertical"
+        android:layout_marginRight="80dp"
+        android:textColor="#000"
+        android:textSize="25sp"
+        android:text="@string/bar_timedefault_hint"
+        android:textStyle="bold"
+        android:typeface="sans"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="电量"
+        android:textSize="25sp"
+        android:layout_marginRight="5dp"
+        android:layout_gravity="right|center_vertical"
+        />
+
+
+</FrameLayout>

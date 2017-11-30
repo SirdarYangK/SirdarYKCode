@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="名字"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:id="@+id/tv_wifi_ssid"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_wifi_ssid"
+        android:layout_marginTop="5dp"
+        android:textSize="20sp"
+        android:text="wifi_encrypted"
+        android:id="@+id/tv_wifi_encrypted"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:id="@+id/iv_wifi_Strong"
+        android:background="@drawable/wifi_0_bar_48px"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="30dp"
+        android:textSize="20sp"
+        android:layout_toLeftOf="@+id/iv_wifi_Strong"
+        android:id="@+id/tv_wifi_statue"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/wifi_lock"
+        android:id="@+id/iv_wifi_lock"
+        android:layout_alignTop="@+id/tv_wifi_encrypted"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>

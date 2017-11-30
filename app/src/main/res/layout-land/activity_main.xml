@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context="com.bjghhnt.app.treatmentdevice.activities.FullPanelActivity">
+
+    <!--改动前start-->
+    <!--<TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="100dp"
+        android:layout_marginTop="10dp"
+        android:textSize="25sp"
+        android:visibility="invisible"
+        />
+    <include
+        android:id="@+id/included_layout_main"
+        layout="@layout/layout_side_bar"
+        android:visibility="invisible"
+        />-->
+    <!--end-->
+    <!--改动后start-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/btn_tile_treatment"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="#DA2220"
+                android:drawableTop="@drawable/operation"
+                android:gravity="top|center"
+                android:paddingTop="125dp"
+                android:text="@string/str_treatment_device"
+                android:textColor="@android:color/white"
+                android:textSize="50sp" />
+
+            <Button
+                android:id="@+id/btn_tile_propaganda"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="#3C489C"
+                android:drawableTop="@drawable/play"
+                android:gravity="top|center"
+                android:paddingTop="125dp"
+                android:text="@string/str_propaganda"
+                android:textColor="@android:color/white"
+                android:textSize="50sp" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:contentDescription="@string/str_description_logo"
+                android:gravity="center"
+                android:src="@drawable/logo_vector" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_tile_theory"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="#5FAD33"
+                android:drawableTop="@drawable/office"
+                android:gravity="top|center"
+                android:paddingTop="125dp"
+                android:text="@string/str_theory"
+                android:textColor="@android:color/white"
+                android:textSize="50sp" />
+
+            <Button
+                android:id="@+id/btn_tile_preferences"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="#DA327D"
+                android:drawableTop="@drawable/set"
+                android:gravity="top|center"
+                android:paddingTop="125dp"
+                android:text="@string/preferences"
+                android:textColor="@android:color/white"
+                android:textSize="50sp" />
+
+            <Button
+                android:id="@+id/btn_tile_contact_us"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="#F99736"
+                android:drawableTop="@drawable/service"
+                android:gravity="top|center"
+                android:paddingTop="125dp"
+                android:text="@string/str_contact_us"
+                android:textColor="@android:color/white"
+                android:textSize="50sp" />
+        </LinearLayout>
+    </LinearLayout>
+    <include
+        android:id="@+id/included_layout_titlebar"
+        layout="@layout/layout_titlebar"
+        />
+</FrameLayout>

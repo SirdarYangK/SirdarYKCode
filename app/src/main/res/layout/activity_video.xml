@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="horizontal"
+	android:baselineAligned="false"
+	tools:context="com.bjghhnt.app.treatmentdevice.activities.VideoActivity">
+
+	<LinearLayout
+		android:layout_width="wrap_content"
+		android:layout_height="match_parent"
+		android:layout_weight="5"
+		android:orientation="vertical">
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="@android:color/darker_gray"
+			android:text="@string/str_playlist"
+			android:textSize="40sp"/>
+
+		<ListView
+			android:id="@+id/list_view_movies"
+			android:layout_width="wrap_content"
+			android:layout_weight="1"
+			android:layout_height="0dp">
+		</ListView>
+
+		<Button
+			android:id="@+id/btn_go_back_from_video"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:text="@string/str_go_back"
+			android:textSize="40sp"/>
+
+	</LinearLayout>
+
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_weight="1"
+		android:background="@android:color/background_dark">
+
+		<ImageView
+			android:id="@+id/image_view_idle_player"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:src="@drawable/film_100px"
+			android:scaleType="center"
+			android:background="#d4d4d4"
+			android:layout_gravity="center"
+			android:contentDescription="@string/str_description_idle_panel"/>
+
+		<VideoView
+			android:id="@+id/video_view_player"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_gravity="center"/>
+	</FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:paddingBottom="1dp"
+	android:paddingLeft="1dp"
+	android:paddingRight="1dp"
+	android:paddingTop="1dp"
+	tools:context="com.bjghhnt.app.treatmentdevice.activities.FullPanelActivity">
+
+
+		<FrameLayout
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_margin="4dp"
+			android:layout_weight="1"
+			android:background="@android:color/white">
+
+			<com.bjghhnt.app.treatmentdevice.views.TreatingMeterView
+				android:id="@+id/custom_view_chn_1"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_gravity="center"/>
+		</FrameLayout>
+
+		<FrameLayout
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_margin="4dp"
+			android:layout_weight="1"
+			android:background="@android:color/white">
+
+			<com.bjghhnt.app.treatmentdevice.views.TreatingMeterView
+				android:id="@+id/custom_view_chn_2"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_gravity="center"/>
+		</FrameLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_margin="4dp"
+			android:layout_weight="1"
+			android:orientation="vertical"
+			android:gravity="center"
+			android:background="@android:color/white"
+			android:visibility="gone"
+			android:layout_gravity="center">
+
+			<Button
+				android:id="@+id/btn_switch_full_panel"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/str_switch"/>
+
+			<Button
+				android:id="@+id/btn_setting_full_panel"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/str_settings"/>
+
+			<Button
+				android:id="@+id/btn_setting_go_back"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/str_go_back"/>
+
+		</LinearLayout>
+
+</LinearLayout>

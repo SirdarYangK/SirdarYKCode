@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="setting_background_color">#F0EDE4</color>
+    <color name="main_hue">#336633</color>
+    <color name="green1">#99CC33</color>
+    <color name="green2">#00CC00</color>
+    <color name="green3">#009966</color>
+    <color name="green4">#669933</color>
+    <color name="green5">#006633</color>
+    <color name="green6">#003300</color>
+    <color name="purple1">#996699</color>
+    <color name="purple2">#660066</color>
+    <color name="purple3">#663399</color>
+    <color name="blue1">#99ccff</color>
+    <color name="blue2">#66ccff</color>
+    <color name="blue3">#0099cc</color>
+    <color name="blue4">#006699</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="gray">#cccccc</color>
+    <color name="gray2">#666666</color>
+</resources>

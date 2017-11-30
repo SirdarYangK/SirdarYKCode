@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context="com.bjghhnt.app.treatmentdevice.activities.ContactUsActivity">
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/text_view_contact_us"
+		android:textSize="30sp"
+		android:layout_gravity="center"/>
+
+	<Button
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/str_go_back"
+		android:id="@+id/btn_back_from_contact_us"/>
+	<include
+		android:id="@+id/included_layout_titlebar"
+		layout="@layout/layout_titlebar"
+		/>
+</FrameLayout>

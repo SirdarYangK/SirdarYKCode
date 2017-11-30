@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F0EDE4"
+        android:orientation="vertical">
+
+        <include layout="@layout/bar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="50dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <RadioGroup
+                    android:id="@+id/rg_set"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center|top"
+                    android:orientation="vertical"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rb_wifi"
+                        style="@style/SettingRadioButtonStyles"
+                        android:drawableTop="@drawable/set_wifi_selector"
+                        android:text="@string/str_wifi_setting" />
+
+                    <include layout="@layout/split" />
+
+                    <RadioButton
+                        android:id="@+id/rb_screen"
+                        style="@style/SettingRadioButtonStyles"
+                        android:drawableTop="@drawable/set_screen_selector"
+                        android:text="@string/str_screen_setting" />
+
+                    <include layout="@layout/split" />
+
+                    <RadioButton
+                        android:id="@+id/rb_sound"
+                        style="@style/SettingRadioButtonStyles"
+                        android:drawableTop="@drawable/set_sound_selector"
+                        android:text="@string/str_sound_setting" />
+
+                    <include layout="@layout/split" />
+
+                    <RadioButton
+                        android:id="@+id/rb_lock"
+                        style="@style/SettingRadioButtonStyles"
+                        android:drawableTop="@drawable/set_lock_selector"
+                        android:text="@string/str_lock_setting" />
+
+                    <include layout="@layout/split" />
+
+                    <RadioButton
+                        android:id="@+id/rb_dev"
+                        style="@style/SettingRadioButtonStyles"
+                        android:drawableTop="@drawable/set_dev_selector"
+                        android:text="@string/str_dev_setting" />
+
+                    <include layout="@layout/split" />
+
+                    <RadioButton
+                        android:id="@+id/rb_about"
+                        style="@style/SettingRadioButtonStyles"
+                        android:drawableTop="@drawable/set_about_selector"
+                        android:text="@string/str_case_setting" />
+
+                    <include layout="@layout/split" />
+
+                    <RadioButton
+                        android:id="@+id/rb_back"
+                        style="@style/SettingRadioButtonStyles"
+                        android:drawableTop="@drawable/set_backi_selector"
+                        android:text="@string/str_back_setting" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <com.bjghhnt.app.treatmentdevice.views.NoScrollViewPager
+                android:id="@+id/vp_set_details"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="9"
+                android:background="#2E2947"
+                android:padding="5dp">
+
+            </com.bjghhnt.app.treatmentdevice.views.NoScrollViewPager>
+        </LinearLayout>
+    </LinearLayout>
+    <include
+        android:id="@+id/included_layout_titlebar"
+        layout="@layout/layout_titlebar"
+        />
+</FrameLayout>
